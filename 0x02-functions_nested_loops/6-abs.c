@@ -2,7 +2,7 @@
 
 /**
  * _abs - computes the absolute value of an integer
- * @v: integer to be checked
+ * @r: integer to be checked
  * Return: the absolute value
  */
 int _abs(int r)
