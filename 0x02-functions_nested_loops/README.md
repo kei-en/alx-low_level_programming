@@ -5,3 +5,4 @@ Contains:
 3-islower.c - checks for lowercase character returning 1 on success
 4-isalpha.c - checks for alphabetic character returning 1 on success
 5-sign.c - prints the sign of a number
+6-abs.c - computes the absolute value of an integer
