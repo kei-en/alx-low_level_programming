@@ -4,3 +4,4 @@ Contains:
 2-strlen.c - returns the length of a string
 3-puts.c - prints a string
 4-print_rev.c - prints a string, in reverse
+5-rev_string.c - reverses a string
