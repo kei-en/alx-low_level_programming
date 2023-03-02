@@ -9,3 +9,4 @@ Contains:
 7-leet.c - encodes a string into 1337
 100-rot13.c - encodes a string using rot13
 101-print_number.c - prints an integer using _putchar
+102-magic.c - prints a[2] = 98
