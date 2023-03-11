@@ -1,4 +1,4 @@
-#include <stio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -10,9 +10,9 @@
 */
 int main(int argc, char *argv[])
 {
-	int i, j, sum;
+	int i, j, sum = 0;
 
-	for (i = 0; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
 		for (j = 0; argv[i][j]; j++)
 		{
