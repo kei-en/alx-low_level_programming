@@ -3,7 +3,7 @@
 
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
-dog_t *new_dog(char *name, float age, char *owner);
+
 /**
  * new_dog - creates a new dog
  * @name: name of new dog
@@ -72,12 +72,9 @@ int _strlen(char *s)
 */
 char *_strcpy(char *dest, char *src)
 {
-	int length, i;
+	int i;
 
-	for (length = 0; src[length] != '\0'; length++)
-		;
-
-	for (i = 0; i < length; i++)
+	for (i = 0; src[i]; i++)
 		dest[i] = src[i];
 
 	dest[i] = '\0';
