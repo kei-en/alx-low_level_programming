@@ -7,7 +7,7 @@ void p_char(va_list argp);
 void p_int(va_list argp);
 void p_float(va_list argp);
 void p_string(va_list argp);
-void print_all(const char * const format, ...);
+
 /**
  * p_char - prints a character
  * @argp: list of arguments pointing to the character
@@ -61,6 +61,13 @@ void p_string(va_list argp)
 	char *s;
 
 	s = va_arg(argp, char *);
+
+	if (s == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
+
 	printf("%s", s);
 }
 
