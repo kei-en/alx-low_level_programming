@@ -5,3 +5,4 @@ Contains:<br />**0-print_listint.c** - prints all the elements of a *listint_t* 
 <br />**5-free_listint2.c** - frees a *listint_t* list
 <br />**6-pop_listint.c** - deletes the head node of a *listint_t* linked llist, and return the head node's data
 <br />**7-get_nodeint.c** - returns the nth node of a *listint_t* linked list
+<br />**8-sum_listint.c** - returns the sum of all the data of a *listint_t* linked list
