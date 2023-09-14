@@ -15,22 +15,22 @@
  */
 int advanced_binary_recursive(int *array, size_t lt, size_t rt, int value)
 {
-    size_t i;
+	size_t i;
 
-    if (rt < lt)
-        return (-1);
+	if (rt < lt)
+		return (-1);
 
-    printf("Searching in array: ");
-    for (i = lt; i < rt; i++)
-        printf("%d, ", array[i]);
-    printf("%d\n", array[i]);
+	printf("Searching in array: ");
+	for (i = lt; i < rt; i++)
+		printf("%d, ", array[i]);
+	printf("%d\n", array[i]);
 
-    i = lt + (rt - lt) / 2;
-    if (array[i] == value && (i == lt || array[i - 1] != value))
-        return (i);
-    if (array[i] >= value)
-        return (advanced_binary_recursive(array, lt, i, value));
-    return (advanced_binary_recursive(array, i + 1, rt, value));
+	i = lt + (rt - lt) / 2;
+	if (array[i] == value && (i == lt || array[i - 1] != value))
+		return (i);
+	if (array[i] >= value)
+		return (advanced_binary_recursive(array, lt, i, value));
+	return (advanced_binary_recursive(array, i + 1, rt, value));
 }
 
 /**
@@ -47,8 +47,8 @@ int advanced_binary_recursive(int *array, size_t lt, size_t rt, int value)
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-    if (array == NULL || size == 0)
-        return (-1);
+	if (array == NULL || size == 0)
+		return (-1);
 
-    return (advanced_binary_recursive(array, 0, size - 1, value));
+	return (advanced_binary_recursive(array, 0, size - 1, value));
 }
