@@ -15,28 +15,28 @@
  */
 int _binary_search(int *array, size_t lt, size_t rt, int value)
 {
-    size_t i;
+	size_t i;
 
-    if (array == NULL)
-        return (-1);
+	if (array == NULL)
+		return (-1);
 
-    while (rt >= lt)
-    {
-        printf("Searching in array: ");
-        for (i = lt; i < rt; i++)
-            printf("%d, ", array[i]);
-        printf("%d\n", array[i]);
+	while (rt >= lt)
+	{
+		printf("Searching in array: ");
+		for (i = lt; i < rt; i++)
+			printf("%d, ", array[i]);
+		printf("%d\n", array[i]);
 
-        i = lt + (rt - lt) / 2;
-        if (array[i] == value)
-            return (i);
-        if (array[i] > value)
-            rt = i - 1;
-        else
-            lt = i + 1;
-    }
+		i = lt + (rt - lt) / 2;
+		if (array[i] == value)
+			return (i);
+		if (array[i] > value)
+			rt = i - 1;
+		else
+			lt = i + 1;
+	}
 
-    return (-1);
+	return (-1);
 }
 
 /**
@@ -53,18 +53,18 @@ int _binary_search(int *array, size_t lt, size_t rt, int value)
  */
 int exponential_search(int *array, size_t size, int value)
 {
-    size_t i = 0, rt;
+	size_t i = 0, rt;
 
-    if (array == NULL)
-        return (-1);
+	if (array == NULL)
+		return (-1);
 
-    if (array[0] != value)
-    {
-        for (i = 1; i < size && array[i] <= value; i = i * 2)
-            printf("Value checked array[%ld] = [%d]\n", i, array[i]);
-    }
+	if (array[0] != value)
+	{
+		for (i = 1; i < size && array[i] <= value; i = i * 2)
+			printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+	}
 
-    rt = i < size ? i : size - 1;
-    printf("Value found between indexes [%ld] and [%ld]\n", i / 2, rt);
-    return (_binary_search(array, i / 2, rt, value));
+	rt = i < size ? i : size - 1;
+	printf("Value found between indexes [%ld] and [%ld]\n", i / 2, rt);
+	return (_binary_search(array, i / 2, rt, value));
 }
